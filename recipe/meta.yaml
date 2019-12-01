@@ -23,7 +23,7 @@ requirements:
     - audiogrep
     - beautifulsoup4
     - decorator
-    - imageio
+    - imageio =2.4.1
     - moviepy
     - numpy
     - pillow
