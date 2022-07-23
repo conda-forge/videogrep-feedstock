@@ -1,5 +1,5 @@
 {% set name = "videogrep" %}
-{% set version = "0.5.8" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,17 +7,18 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4c7d75a7cc842619d4e8791e792a9992aaf88dc2ad043bdd2af1fcf81680649e
+  sha256: 619639b58b767a9cd89245930c14070c522f740e5ee70196d03e761e98981afc
 
 build:
-  number: 1004
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  skip: True  # [win]
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  skip: true  # [win]
 
 requirements:
   host:
     - python
     - pip
+    - poetry
   run:
     - python
     - audiogrep
@@ -42,7 +43,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'automatic video supercuts with python'
+  summary: automatic video supercuts with python
 
   description: |
     Videogrep is a command line tool that searches through dialog in video
