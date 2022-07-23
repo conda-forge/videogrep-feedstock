@@ -1,5 +1,5 @@
 {% set name = "videogrep" %}
-{% set version = "2.1.0" %}
+{% set version = "2.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b546a080f57d8700857d8ec5e6591cdb080370eca03a084d45657ae8d023d808
+  sha256: 3e600cf3be514708a7bae9b6a00c2a11841ea9e5e6aa33d75aa9aa36011cc1a8
 
 build:
   number: 0
