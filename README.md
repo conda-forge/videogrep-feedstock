@@ -1,11 +1,11 @@
-About videogrep
-===============
+About videogrep-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/videogrep-feedstock/blob/main/LICENSE.txt)
 
 Home: http://antiboredom.github.io/videogrep
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/videogrep-feedstock/blob/main/LICENSE.txt)
 
 Summary: automatic video supercuts with python
 
