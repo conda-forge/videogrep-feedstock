@@ -1,4 +1,5 @@
 {% set name = "videogrep" %}
+{% set python_min = "3.8" %}
 {% set version = "2.3.0" %}
 
 package:
@@ -11,24 +12,26 @@ source:
 
 build:
   number: 1
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
-  skip: true  # [win or py<=38]
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  noarch: python
   entry_points:
     - videogrep = videogrep.cli:main
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
+    - poetry-core >=1.0.0
     - pip
-    - poetry
   run:
-    - python
+    - python >={{ python_min }}
     - beautifulsoup4
     - imageio
     - moviepy
     # vosk ==0.3.32 is an optional dependency but not currently on conda-forge
 
 test:
+  requires:
+    - python {{ python_min }}
   commands:
     - videogrep -h
   imports:
